@@ -21,7 +21,7 @@ This will start the service on port 8080.
 
 ## Accessing the Service
 
-To access the service, open a web browser and navigate to `http://localhost:8080/country/{countryCode}`, where `{countryCode}` is the 2-letter code for the country you are interested in. For example, to get COVID-19 statistics for Bulgaria, you would navigate to `http://localhost:8080/country/bg`.
+To access the service, open a web browser and navigate to `http://localhost:8080/country/{countryCode}`, where `{countryCode}` is the 2-letter code for the country you are interested in. For example, to get COVID-19 statistics for Bulgaria, you would navigate to `http://localhost:8080/country/BG`.
 
 The service returns a JSON object containing the COVID-19 statistics for the specified country. Here's an example:
 
