@@ -22,7 +22,10 @@ public class CountryController {
     }
 
     @GetMapping(path = "/{countryCode}")
-    ResponseEntity<CountryResponse> getByCode(@PathVariable String countryCode){
+    ResponseEntity<CountryResponse> getByCode(@PathVariable String countryCode) {
+        if (!countryCode.chars().allMatch(Character::isUpperCase)) {
+            throw new IllegalArgumentException("Country code should be in uppercase letters");
+        }
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(countryService.getByCode(countryCode));

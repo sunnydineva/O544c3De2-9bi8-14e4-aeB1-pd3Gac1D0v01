@@ -13,4 +13,10 @@ public class AppExceptionHandler {
     String handlerRecordNotFoundException(RuntimeException ex){
         return  ex.getMessage();
     }
+
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(IllegalArgumentException.class)
+    String handlerIllegalArgumentException(IllegalArgumentException ex){
+        return  ex.getMessage();
+    }
 }
